@@ -28,7 +28,7 @@ function ScheduleService() {
   return (
     <div>
      
-      <form style={{ display: "flex",flexDirection: "column", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 255, 0.5)"}}>
+      <form style={{ display: "flex",flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
      
               <div>
                 <label>First Name</label>
