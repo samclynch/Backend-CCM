@@ -1,26 +1,28 @@
-import React from "react";
+import React,{useState} from "react";
 
-function ScheduleService() {
-  // const [formData, setFormData] = useState({
-  //   firstname: "",
-  //   lastname: "",
-  //   email: "",
-  //   telephone: "",
-  //   subject: "",
-  //   servicejob:"",
-  //   message: "",
-  // });
 
-  // const handleChange = (e) => {
-  //   setFormData({ ...formData, [e.target.name]: e.target.value });
-  // };
 
-  // const onSubmit = (e) => {
-  //   console.log("onSubmit triggered");
-  //   e.preventDefault();
-  //   uploadJob(formData);
-  //   e.target.reset();
-  // };
+function ScheduleService({uploadJob}) {
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    telephone: "",
+    subject: "",
+    servicejob:"",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const onSubmit = (e) => {
+    console.log("onSubmit triggered");
+    e.preventDefault();
+    uploadJob(formData);
+    e.target.reset();
+  };
 
 
   // Add onSubmit for form 

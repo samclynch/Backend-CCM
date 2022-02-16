@@ -30,7 +30,7 @@ useEffect(() => {
 
 
 //Adding new job from Form
-const uploadjob= (formData) => {
+const uploadJob= (formData) => {
   console.log(formData);
   formData.servicejob = formData.servicejob.split(",");
   console.log(formData.servicejob);
@@ -61,7 +61,7 @@ const uploadjob= (formData) => {
         </Route>
 
         <Route exact path="/schedule-service">
-          <ScheduleService uploadjob={uploadjob}/>
+          <ScheduleService uploadjob={uploadJob}/>
         </Route> 
 
         <Route exact path="/jobpage">
