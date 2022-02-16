@@ -38,8 +38,8 @@ function Footer() {
         </Slide>
       </div>
       <div id="wrapper" style={{backgroundColor: "white"}}>
-<div id="wrapper">
-  <p>Address:</p>
+<div id="foot">
+  <h3>Address:</h3>
   <p>Climate Control Masters</p>
   <p>120 Promenade Rd</p>
   <p>Batesburg SC 29006</p>
@@ -51,7 +51,7 @@ function Footer() {
 <p>Emergency Service Available</p>
 </div>
 
-<div id="wrapper">
+<div id="foot">
 <h3>Service Area </h3> 
 <li>Batesburg</li>
 <li>Lexington</li>
@@ -61,7 +61,7 @@ function Footer() {
 <li>Aiken</li>
 </div>
 
-<div id="wrapper">
+<div id="foot">
   <h3>HVAC Services</h3>
   <li>HVAC Installation</li>
   <li>HVAC Replacement</li>

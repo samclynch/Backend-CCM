@@ -6,12 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
    background-color: lightblue; 
-  background-image: url('../public/Man.jpg');
+  /* background-image: url('../public/Man.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
   font-size: 15px;
-    font-weight: bold;
+    font-weight: bold; */
 }
  
 code {
@@ -56,7 +56,14 @@ label {
 }
 
 #wrapper{
-  width: 500px;
-  display: "inline-block";
+  width: 100%;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: top;
 }
 
+#foot{
+  display:inline-block;
+  justify-content: space-evenly;
+  align-items: center;
+}
