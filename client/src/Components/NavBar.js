@@ -12,7 +12,7 @@ const linkStyles = {
   textAlign: "center",
   inlineSize: "150px",
   justifyContent: "center",
-  marginTop: "10px"
+  marginTop: "10px",
 };
 
 function NavBar() {

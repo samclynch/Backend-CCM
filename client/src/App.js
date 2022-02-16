@@ -7,9 +7,43 @@ import ScheduleService from "./Components/ScheduleService";
 import Login from "./Components/Login";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Jobpage from "./Components/Jobpage";
 import './App.css';
 
 function App() {
+
+ const [jobs, setJobs] = useState([]);
+ const [newJobs, setNewJobs] = useState([]);
+
+
+
+//  //Fetch Data from backend
+//  const getjobs = () => {
+//   fetch(`http://localhost:4000/jobs/`)
+//     .then((response) => response.json())
+//     .then((data) => setJobs(data));
+// };
+
+// useEffect(() => {
+//   getjobs();
+// }, []);
+
+
+//Adding new job from Form
+const uploadjob= (formData) => {
+  console.log(formData);
+  formData.servicejob = formData.servicejob.split(",");
+  console.log(formData.servicejob);
+  fetch(`http://localhost:4000/jobs`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => response.json())
+    .then((newJobs) => setNewJobs([...jobs, newJobs]));
+};
 
   return (
     <div>
@@ -27,8 +61,12 @@ function App() {
         </Route>
 
         <Route exact path="/schedule-service">
-          <ScheduleService />
+          <ScheduleService uploadjob={uploadjob}/>
         </Route> 
+
+        <Route exact path="/jobpage">
+          <Jobpage />
+        </Route>
       </Switch>
 
       <Footer/>

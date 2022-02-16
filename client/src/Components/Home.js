@@ -30,7 +30,7 @@ function Home() {
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
             </div>
-            <span>Air Service</span>
+            <span>Air Service </span>
           </div>
         </Slide>
       </div>

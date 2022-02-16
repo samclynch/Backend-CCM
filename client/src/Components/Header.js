@@ -10,14 +10,14 @@ function Header() {
 
   return (
       <IconContext.Provider value={{ color: "white" , size: "5em"}}>
-    <div style={{display: "flex", justifyContent: "space-evenly", alignItems: "center"}}>
+    <div style={{display: "flex", justifyContent: "space-evenly", alignItems: "center", backgroundColor: "rgba(255, 50, 0, 0.4)",}}>
       <NavLink to ="/" exact>
       <img src={ccmlogo} alt= "ccmlogo" style={{height: "200px", width: "600px"}}/>
       </NavLink>
-    <AiOutlineMail/> yorkhvacpro@gmail.com
-    <BsFillTelephoneFill/> (803) 317-5809
+    <AiOutlineMail/> <span style={{fontSize:"20px"}}>Yorkhvacpro@gmail.com</span>
+    <BsFillTelephoneFill/> <span style={{fontSize:"20px"}}>(803) 317-5809</span>
     
-    <BiTime/> Mon - Sun: 8 am - 7 pm | Emergency Service Available 
+    <BiTime/> <span style={{fontSize:"20px"}}>Mon - Sun: 8 am - 7 pm | Emergency Service Available </span>
   
     </div>
     </IconContext.Provider>
