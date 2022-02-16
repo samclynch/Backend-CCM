@@ -17,16 +17,16 @@ function App() {
 
 
 
-//  //Fetch Data from backend
-//  const getjobs = () => {
-//   fetch(`http://localhost:4000/jobs/`)
-//     .then((response) => response.json())
-//     .then((data) => setJobs(data));
-// };
+ //Fetch Data from backend
+ const getjobs = () => {
+  fetch(`http://localhost:4000/jobs/`)
+    .then((response) => response.json())
+    .then((data) => setJobs(data));
+};
 
-// useEffect(() => {
-//   getjobs();
-// }, []);
+useEffect(() => {
+  getjobs();
+}, []);
 
 
 //Adding new job from Form
