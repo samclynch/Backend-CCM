@@ -19,7 +19,7 @@ function App() {
 
  //Fetch Data from backend
  const getjobs = () => {
-  fetch(`http://localhost:4000/jobs/`)
+  fetch(`/jobs`)
     .then((response) => response.json())
     .then((data) => setJobs(data));
 };
@@ -31,10 +31,10 @@ useEffect(() => {
 
 //Adding new job from Form
 const uploadJob= (formData) => {
-  console.log(formData);
-  formData.servicejob = formData.servicejob.split(",");
-  console.log(formData.servicejob);
-  fetch(`http://localhost:4000/jobs`, {
+  // console.log(formData);
+  // // formData.servicejob = formData.servicejob.split(",");
+  // console.log(formData.servicejob);
+  fetch(`/jobs`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const uploadJob= (formData) => {
     <NavBar />
     
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/home">
           <Home />
         </Route>
 
@@ -61,11 +61,11 @@ const uploadJob= (formData) => {
         </Route>
 
         <Route exact path="/schedule-service">
-          <ScheduleService uploadjob={uploadJob}/>
+          <ScheduleService uploadJob={uploadJob}/>
         </Route> 
 
         <Route exact path="/jobpage">
-          <Jobpage />
+          <Jobpage newJobs={newJobs} />
         </Route>
       </Switch>
 

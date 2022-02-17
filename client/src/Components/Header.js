@@ -11,7 +11,7 @@ function Header() {
   return (
       <IconContext.Provider value={{ color: "white" , size: "5em"}}>
     <div style={{display: "flex", justifyContent: "space-evenly", alignItems: "center", backgroundColor: "rgba(255, 50, 0, 0.4)",}}>
-      <NavLink to ="/" exact>
+      <NavLink to ="/home" exact>
       <img src={ccmlogo} alt= "ccmlogo" style={{height: "200px", width: "600px"}}/>
       </NavLink>
     <AiOutlineMail/> <span style={{fontSize:"20px"}}>Yorkhvacpro@gmail.com</span>
