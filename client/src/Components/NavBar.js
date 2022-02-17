@@ -19,7 +19,7 @@ function NavBar() {
   return (
     <div style={{display: "flex",justifyContent: "center"}}>
       <NavLink
-        to="/"
+        to="/home"
         exact
         style={linkStyles}
         activeStyle={{
